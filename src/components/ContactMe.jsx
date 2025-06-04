@@ -9,7 +9,7 @@ function ContactMe() {
     }
   return (
     <div>
-        <section id="contact" className=" py-20">
+        <section id="contact" className=" py-20 ">
             <div className="container w-full mx-auto px-4 flex flex-col  justify-center items-center">
             <h2 className="text-3xl text-white font-bold text-center mb-8">Get In Touch</h2>
             <p className="text-center text-xl text-gray-300 mb-6 w-[60%]">
