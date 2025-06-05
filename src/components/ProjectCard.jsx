@@ -30,10 +30,10 @@ function ProjectCard({ project }) {
           <FeaturePoint key={index} text={feature} />
         ))}
       </ul>
-      <div className="flex flex-col gap-2 w-36 md:w-full md:flex-row justify-center mt-6 ">
+      <div className="flex flex-col gap-2 w-full md:w-full md:flex-row justify-center items-center  mt-6 ">
      
         <ButtonWithArrow text="GitHub" livelink={githublink} />
-        <ButtonWithArrow text="Live Demo" livelink={livelink} />
+        <ButtonWithArrow text="Live Demo" livelink={livelink} color={"linear-gradient(135deg, #6253e1, #04befe)"}/>
       </div>
     </div>
   );

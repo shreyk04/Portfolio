@@ -1,12 +1,13 @@
 import React from 'react'
 
-function ButtonWithArrow({text, livelink}) {
+function ButtonWithArrow({text, livelink,color}) {
   return (
      <a
           href={livelink}
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-blue-950 text-sm text-white px-4 py-2 rounded-lg transition-colors duration-300 ml-4 cursor-pointer"
+          className={`bg-blue-950 text-sm text-white px-4 py-2 rounded-lg transition-colors duration-300 md:ml-4 cursor-pointer w-36 text-center `}
+          style={text === "Live Demo" ? { background: color } : {}}
         >
           {text}
           <svg
