@@ -48,6 +48,20 @@ const projects=[
         githublink:"https://github.com/shreyk04/Movie_App",
         livelink:"https://shreyk04.github.io/Movie_App/"
 
+    },
+    {
+        title:"Haunted House",
+        description:"A visually immersive 3D haunted house experience built using Three.js. This project simulates a spooky environment with dynamic lighting, atmospheric effects, and interactive camera controls for a cinematic web experience.",
+        howItHelps:"It offers movie lovers a centralized place to explore and search for films easily, discover new releases, and filter content by genre or cast — all through an intuitive, mobile-friendly interface. The platform enhances entertainment choices and keeps users updated with the latest cinematic offerings.",
+        features:[
+            "Created a fully navigable haunted house scene using Three.js with detailed 3d models and textures.",
+            "Includes animated lights, color gradients, and environmental effects to enhance the haunted atmosphere.",
+           
+        ],
+        techStack:["Three.js"],
+        githublink:"https://github.com/shreyk04/Haunted_House",
+        livelink:"https://haunted-house-iota-murex.vercel.app/"
+
     }
     
 ]

@@ -22,8 +22,8 @@ function ProjectCard({ project }) {
       <TechStackChips techs={techStack} />
       <h1 className="text-md text-white font-semibold mb-2">Description</h1>
       <p className="text-gray-400 mb-6">{description}</p>
-      <h1 className="text-md text-white  font-semibold mb-2">How it Helps</h1>
-      <p className="text-gray-400 mb-6">{howItHelps}</p>
+      {/* <h1 className="text-md text-white  font-semibold mb-2">How it Helps</h1>
+      <p className="text-gray-400 mb-6">{howItHelps}</p> */}
       <h1 className="text-md text-white  font-semibold mb-2">Features</h1>
       <ul>
         {features.map((feature, index) => (

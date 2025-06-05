@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
@@ -32,9 +32,24 @@ const Navbar = () => {
     }
   };
 
+  const handleScroll=()=>{
+    if(menuOpen){
+      setMenuOpen(false)
+    }
+    console.log("scrolling")
+  }
+console.log(menuOpen)
+  useEffect(()=>{
+     document.addEventListener("wheel",handleScroll)
+     return ()=>{
+      document.removeEventListener("wheel",handleScroll)
+
+     }
+  },[menuOpen])
+
   return (
     <div className="w-full z-50 flex justify-center items-center pointer-events-none">
-      <nav className="fixed top-0 left-1/2 transform -translate-x-1/2 bg-blue-950/60 backdrop-blur-md border border-blue-800 shadow-lg w-[95vw] sm:w-[80vw] md:w-[60vw] lg:w-[40vw] rounded-full mt-4 z-50 px-4 py-2 pointer-events-auto">
+      <nav className="fixed top-0 md:left-1/2 right-0  bg-blue-950/60 backdrop-blur-md border border-blue-800 shadow-lg w-fit sm:w-[80vw] md:w-[60vw] lg:w-[40vw] rounded-lg mt-4 z-50 px-4 mr-2 md:mr-0 py-2 pointer-events-auto">
         {/* Mobile Header */}
         <div className="flex justify-between items-center sm:hidden">
           <div className="text-white font-bold text-lg"></div>

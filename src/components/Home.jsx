@@ -3,6 +3,8 @@ import React, { useState, useRef } from "react";
 import { DownloadOutlined } from "@ant-design/icons";
 import { createStyles } from "antd-style";
 import { motion, useAnimation, useInView } from "framer-motion";
+import { useScrollAnimation } from "../hooks/useScrollAnimation";
+import { imageVariant, textVariants } from "../animations/motionVariants";
 
 const useStyle = createStyles(({ prefixCls, css }) => ({
   linearGradientButton: css`
@@ -28,63 +30,26 @@ const useStyle = createStyles(({ prefixCls, css }) => ({
   `,
 }));
 
-const textVariants = {
-  hidden: { opacity: 0, y: -50 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      delay: 0.2,
-      duration: 0.8,
-    },
-  },
-};
-
-const imageVariant = {
-  hidden: {
-    opacity: 0,
-    x: 100,
-  },
-  visible: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      delay: 0.4,
-      duration: 0.8,
-    },
-  },
-};
-
 function Home() {
   const [size] = useState("small");
   const { styles } = useStyle();
 
   // --- Animation controls and in-view logic ---
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: false, amount: 0.3 });
-  const controls = useAnimation();
-
-  React.useEffect(() => {
-    if (isInView) {
-      controls.start("visible");
-    } else {
-      controls.start("hidden");
-    }
-  }, [isInView, controls]);
+  const { ref, controls } = useScrollAnimation();
 
   return (
     <div
       ref={ref}
       className="w-full flex-col-reverse flex md:flex-row gap-4 mt-10 text-gray-400 relative"
     >
-      <div className="flex flex-col p-4 h-full md:w-[70%] justify-center items-center">
+      <div className="flex flex-col p-4 h-full md:w-[70%] w-full justify-center items-center">
         <motion.h1
-          className="text-white text-3xl tracking-wide md:text-7xl font-bold mt-4"
+          className="text-white text-3xl tracking-wide md:text-7xl font-bold mt-4 text-shadow-2xs "
           variants={textVariants}
           initial="hidden"
           animate={controls}
         >
-          👋 Hi,Welcome to my Portfolio
+          <span className="wave">👋</span> Hi,Welcome to my Portfolio
         </motion.h1>
         <motion.p
           className="text-[1.2rem] my-3"
@@ -146,12 +111,12 @@ function Home() {
         animate={controls}
       >
         <div className="mt-8 border-2 rounded-full overflow-hidden flex items-center justify-center w-56 md:w-80 max-w-xs md:max-w-lg h-auto aspect-square">
-  <img
-    src="/images/Profile_Sk.jpg"
-    alt="Profile"
-    className="w-full h-full object-cover"
-  />
-</div>
+          <img
+            src="/images/Profile_Sk.jpg"
+            alt="Profile"
+            className="w-full h-full object-cover"
+          />
+        </div>
       </motion.div>
     </div>
   );

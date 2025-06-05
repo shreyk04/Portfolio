@@ -1,12 +1,21 @@
 import { CheckCircleIcon } from '@heroicons/react/16/solid'
-import React from 'react'
+import {motion } from 'framer-motion';
+import React, { useRef } from 'react'
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
+import { textVariants } from '../animations/motionVariants';
 
 function FeaturePoint({text}) {
+
+  const {ref,controls}=useScrollAnimation()
+ 
+
   return (
-    <li className='mb-2 flex justify-start items-start text-gray-300'>
+    <motion.li className='mb-2 flex justify-start items-start text-gray-300' ref={ref}  variants={textVariants}
+    initial="hidden"
+    animate={controls}>
         <CheckCircleIcon className="md:w-3 w-12 text-blue-500 inline-block mr-2" />
         <span className='text-gray-400  '>{text}</span>
-    </li>
+    </motion.li>
   )
 }
 
