@@ -1,11 +1,16 @@
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 body{
     background-color: #000000;
-    overflow-x:hidden;
 
 }
 html {
   scroll-behavior: smooth;
+}
+body, #root {
+  overflow-x: hidden;
 }
 
 

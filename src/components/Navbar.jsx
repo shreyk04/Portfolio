@@ -49,12 +49,12 @@ console.log(menuOpen)
 
   return (
     <div className="w-full z-50 flex justify-center items-center pointer-events-none">
-      <nav className="fixed top-0 md:left-1/2 right-0  bg-blue-950/60 backdrop-blur-md border border-blue-800 shadow-lg w-fit sm:w-[80vw] md:w-[60vw] lg:w-[40vw] rounded-lg mt-4 z-50 px-4 mr-2 md:mr-0 py-2 pointer-events-auto">
+      <nav className="fixed top-0 md:left-1/2 right-0  backdrop-blur-md border border-blue-800 shadow-lg  sm:w-[80vw] md:w-[60vw] lg:w-[40vw] rounded-lg mt-4 z-50 px-4 mr-2 md:mr-0 py-2 pointer-events-auto">
         {/* Mobile Header */}
-        <div className="flex justify-between items-center sm:hidden">
+        <div className="flex justify-between items-center sm:hidden ">
           <div className="text-white font-bold text-lg"></div>
           <button
-            className="text-white text-2xl cursor-pointer"
+            className="text-white text-xs cursor-pointer"
             onClick={() => setMenuOpen(!menuOpen)}
           >
             ☰

@@ -138,11 +138,11 @@ const projects=[
 
 function Projects() {
   return (
-    <section className='w-full flex flex-col gap-4 mt-10 '>
+    <section className='w-full flex flex-col gap-4 mt-10 justify-center items-center '>
         <div className=" mx-auto w-full   p-8 ">
             {/* <h1 className="text-cyan-700 text-7xl font-medium mb-8">Projects</h1> */}
             <Title text="Projects"/>
-            <div className="flex flex-wrap  gap-12   w-full h-full"> 
+            <div className="flex flex-wrap  gap-12   w-full h-full md:justify-center md:items-center"> 
             {projects.map((project, index) => (
                 <ProjectCard key={index} project={project} />
             ))}
