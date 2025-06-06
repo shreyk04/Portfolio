@@ -11,9 +11,9 @@ function Experience() {
   return (
     <section>
       <div className="w-full md:h-[100vh] flex flex-col gap-4 mt-10">
-        <div className="flex flex-col p-8  h-full">
+        <div className="flex flex-col p-3 md:p-8  h-full">
           <Title text="Work Experience" />
-          <div className="bg-gray-700 p-4 rounded-lg shadow-md 8">
+          <div className="bg-gray-700 p-4 rounded-lg shadow-md  w-full">
             <h1 className="text-2xl font-bold  text-white">Capgemini</h1>
             <h2 className="text-xl font-semibold text-white">
               Software Engineer

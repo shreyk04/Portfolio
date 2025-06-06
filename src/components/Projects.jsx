@@ -139,7 +139,7 @@ const projects=[
 function Projects() {
   return (
     <section className='w-full flex flex-col gap-4 mt-10 '>
-        <div className=" mx-auto w-full   p-8 ">
+        <div className=" mx-auto w-full   p-3 md:p-8 ">
             {/* <h1 className="text-cyan-700 text-7xl font-medium mb-8">Projects</h1> */}
             <Title text="Projects"/>
             <div className="flex flex-wrap  gap-12   w-full h-full"> 
