@@ -36,9 +36,9 @@ const sendEmail=(e)=>{
   return (
     <>
     <div className=" min-h-screen flex flex-col md:flex-row items-center gap-5 p-5 justify-center mt-20">
-      <div className="max-w-md mx-auto p-6 bg-white rounded-lg shadow-md w-[90%] md:w-[50%] text-xs md:text-xl">
+      <div className="max-w-md mx-auto p-6 bg-gray-900 text-white rounded-lg shadow-md w-[90%] md:w-[50%] text-xs md:text-xl">
         <h2 className="text-2xl font-bold mb-4 ">Contact Me</h2>
-        <p className="text-gray-600  mb-6">I'm always open to discussing new projects, opportunities, or collaborations. Feel free to reach out using the form or through any of my social profiles.</p>
+        <p className="text-gray-400  mb-6">I'm always open to discussing new projects, opportunities, or collaborations. Feel free to reach out using the form or through any of my social profiles.</p>
         <div>
             <ul className="list-none">
                 <li className='flex items-center '><Mail className='w-4 mr-2' /><a href="mailto:shreyakad2001@gmail.com" className="text-blue-500 hover:underline text-[0.7rem]">shreyakad2001@gmail.com</a></li>
@@ -49,20 +49,20 @@ const sendEmail=(e)=>{
       </div>
 
     <form action="" className='md:w-[50%] w-[90%]' ref={form} onSubmit={sendEmail}>
-        <div className="max-w-md mx-auto p-6 bg-white rounded-lg shadow-md">
+        <div className="max-w-md mx-auto p-6 bg-gray-900   rounded-lg shadow-md">
             <div className="mb-4">
-            <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name</label>
-            <input type="text" id="name" name="user_name" required className="p-1 mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 outline-none" />
+            <label htmlFor="name" className="block text-sm font-medium text-white">Name</label>
+            <input type="text" id="name" name="user_name" required className="p-1 mt-1 block w-full border-1   border-slate-500 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 outline-none" />
             </div>
             <div className="mb-4">
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
-            <input type="email" id="email" name="user_email" required className="p-1 mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 outline-none" />
+            <label htmlFor="email" className="block text-sm font-medium text-white">Email</label>
+            <input type="email" id="email" name="user_email" required className="p-1 mt-1 block w-full border-1  border-slate-500  rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 outline-none" />
             </div>
             <div className="mb-4">
-            <label htmlFor="message" className="block text-sm font-medium text-gray-700">Message</label>
-            <textarea id="message" name="message" rows="4" required className="p-1 mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 outline-none"></textarea>
+            <label htmlFor="message" className="block text-sm font-medium text-white">Message</label>
+            <textarea id="message" name="message" rows="4" required className="p-1 mt-1 block w-full border-1   border-slate-500  rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 outline-none"></textarea>
             </div>
-            <button type="submit" className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 cursor-pointer" disabled={loading}>{loading?"Sending... ":"Send Message"}</button>
+            <button type="submit" className="w-full bg-blue-950 text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 cursor-pointer" disabled={loading}>{loading?"Sending... ":"Send Message"}</button>
             
             
             
